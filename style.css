@@ -1,5 +1,8 @@
 body {
-  background: lightblue;
+  background-color: lightblue;
+  background-image: url("img/sfondo.jpg");
+  background-size: cover;
+  background-attachment: fixed;
   font-family: Arial, sans-serif;
   text-align: center;
   padding: 20px;
@@ -43,4 +46,38 @@ h2 {
 }
 .menu a:hover {
   color: orange;
+}
+
+/* Animazioni */
+.menu a {
+  display: inline-block;
+  transition: transform .3s, color .3s;
+}
+.menu a:hover {
+  transform: scale(1.1);
+}
+.scheda {
+  transition: transform .3s, box-shadow .3s;
+}
+.scheda:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, .25);
+}
+.copertina {
+  display: block;
+  max-width: 100%;
+  width: 500px;
+  margin: 20px auto;
+  border-radius: 12px;
+  transition: transform .3s;
+}
+.copertina:hover {
+  transform: scale(1.05);
+}
+@keyframes entra {
+  from { opacity: 0; transform: translateY(15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+h1 {
+  animation: entra .8s ease-out;
 }
